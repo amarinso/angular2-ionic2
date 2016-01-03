@@ -1,28 +1,34 @@
-import {App, IonicApp, Platform} from 'ionic-framework/ionic';
+import {App, IonicApp, Platform, Modal} from 'ionic-framework/ionic';
 
 import {HelloIonicPage} from './pages/hello-ionic/hello-ionic';
 import {ListPage} from './pages/list/list';
+import {PreHome} from './pages/prehome/prehome';
+import {MisListas} from './pages/mislistas/mislistas';
 
 @App({
   templateUrl: 'build/app.html'
 })
 
 class MyApp {
-  constructor(app: IonicApp, platform: Platform) {
+  pages: any[];
+  rootPage: any;
+
+  constructor(private app: IonicApp, private platform: Platform, private modal:Modal) {
+
 
     // set up our app
-    this.app = app;
-    this.platform = platform;
     this.initializeApp();
 
     // set our app's pages
     this.pages = [
+      { title: 'MisListas', component: MisListas },
       { title: 'Hello Ionic', component: HelloIonicPage },
       { title: 'My First List', component: ListPage }
     ];
 
     // make HelloIonicPage the root (or first) page
-    this.rootPage = HelloIonicPage;
+    this.rootPage = MisListas;
+
   }
 
   initializeApp() {

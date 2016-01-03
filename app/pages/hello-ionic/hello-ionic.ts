@@ -1,10 +1,15 @@
-import {Page, NavController} from 'ionic-framework/ionic';
+import {Page, NavController, Modal} from 'ionic-framework/ionic';
+import {PreHome} from '../prehome/prehome';
 
 @Page({
   templateUrl: 'build/pages/hello-ionic/hello-ionic.html'
 })
 export class HelloIonicPage {
-  constructor(nav: NavController) {
-    this.nav = nav;
+  constructor(private nav: NavController, private modal:Modal) {
+  }
+
+  openPreHome() {
+    this.modal.open(PreHome);
+
   }
 }

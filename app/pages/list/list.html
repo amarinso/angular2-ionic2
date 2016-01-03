@@ -10,9 +10,6 @@
     <button ion-item *ngFor="#item of items" (click)="itemTapped($event, item)">
       <icon name="{{item.icon}}" item-left></icon>
       {{item.title}}
-      <div class="item-note" item-right>
-        {{item.note}}
-      </div>
     </button>
   </ion-list>
   <div *ngIf="selectedItem" padding>

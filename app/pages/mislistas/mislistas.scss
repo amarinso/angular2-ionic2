@@ -1,0 +1,49 @@
+.mislistas {
+  ion-item.item {
+    padding-left: 0px;
+  }
+  ion-item img {
+    height: 11rem;
+    max-height: 11rem;
+    width: 11rem;
+    max-width: 11rem;
+  }
+
+  .mislistas-item {
+    display:flex;
+  }
+  .mislistas-item > ion-checkbox {
+    flex:1;
+    padding-left: 0px;
+  }
+  .mislistas-item > ion-checkbox .item-inner {
+    border-bottom: none;
+
+  }
+
+  .mislistas-item > img {
+    flex: 4;
+  }
+
+  .mislistas-item > div.col {
+    flex: 8;
+    position: relative;
+  }
+
+  h2 {
+    font-weight: bolder;
+  }
+
+  .quantity {
+    position: absolute;
+    bottom: 0px;
+
+     button {
+      min-height: 2em;
+      height: 2em;
+      width: 2em;
+      margin-right: 0px;
+    }
+  }
+
+}

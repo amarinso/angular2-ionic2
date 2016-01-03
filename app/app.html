@@ -5,6 +5,7 @@
   </ion-toolbar>
 
   <ion-content>
+    <ion-overlay></ion-overlay>
     <ion-list>
       <button ion-item *ngFor="#p of pages" (click)="openPage(p)">
         {{p.title}}

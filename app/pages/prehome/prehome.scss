@@ -1,0 +1,22 @@
+.prehome {
+  background-image: url(../../img/prehome/fondo_login.png);
+  background-repeat: no-repeat;
+
+  ion-card {
+    background: white;
+    text-align: center;
+  }
+  ion-card-header img {
+    width: 200px;
+    margin: auto;
+  }
+  button {
+    width: 90%;
+  }
+
+  button.cerrar {
+    background-color: orange;
+    color: white;
+    margin: auto;
+  }
+}

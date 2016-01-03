@@ -1,0 +1,26 @@
+<ion-navbar *navbar>
+  <button menuToggle>
+    <icon menu></icon>
+  </button>
+  <ion-title>Mi lista</ion-title>
+</ion-navbar>
+
+<ion-content class="mislistas">
+  <ion-list>
+    <ion-item line-height="250px" *ngFor="#item of items;#idx=index">
+      <div class="mislistas-item">
+        <ion-checkbox></ion-checkbox>
+        <img src="{{item.image}}">
+        <div class="col">
+          <h2>{{item.title}}</h2>
+          <h3>{{item.subtitle}}</h3>
+          {{item.price}}
+          <div class="quantity"><button light (click)="substract(idx)">-</button><button width="2rem">{{quantity[idx]}}</button><button light (click)="sum(idx)">+</button></div>
+        </div>
+      </div>
+    </ion-item>
+  </ion-list>
+  <div *ngIf="selectedItem" padding>
+    You navigated here from <b>{{selectedItem.title}}</b>
+  </div>
+</ion-content>
